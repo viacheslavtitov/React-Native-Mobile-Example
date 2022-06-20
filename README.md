@@ -8,13 +8,13 @@ Clear react-native cache
 npx react-native start --reset-cache
 ```
 
-## Start Metro
+## How to run
+
+First start Metro
 
 ```
 npx react-native start
 ```
-
-## How to run
 
 Run on iOS simulator
 

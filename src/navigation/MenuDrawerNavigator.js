@@ -11,6 +11,8 @@ import {
   mainBackgroundColor,
   secondaryBackgroundColor,
 } from '../../resources/styles/Constants';
+import {getHeaderTitle} from '@react-navigation/elements';
+import MenuDrawerHeaderComponent from '../components/MenuDrawerHeaderComponent';
 
 const Drawer = createDrawerNavigator();
 
@@ -22,9 +24,18 @@ const MenuDrawerNavigator = () => {
         drawerActiveBackgroundColor: secondaryBackgroundColor,
         drawerInactiveTintColor: mainBackgroundColor,
         drawerInactiveBackgroundColor: 'white',
-        headerShown: false,
         drawerLabelStyle: {
           fontSize: mainTextSize,
+        },
+        header: ({navigation, route, options}) => {
+          const title = getHeaderTitle(options, route.name);
+
+          return (
+            <MenuDrawerHeaderComponent
+              title={title}
+              navigationDrawer={navigation}
+            />
+          );
         },
       }}
       drawerContent={props => <MenuDrawerComponent {...props} />}>

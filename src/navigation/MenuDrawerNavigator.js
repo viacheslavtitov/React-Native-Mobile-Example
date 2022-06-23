@@ -6,6 +6,11 @@ import MenuDrawerComponent from '../components/MenuDrawerComponent';
 import BottomTabNavigator from './TabNavigator';
 import LocationScreen from '../screens/menu/location/LocationScreen';
 import SettingsScreen from '../screens/menu/settings/SettingsScreen';
+import {
+  mainTextSize,
+  mainBackgroundColor,
+  secondaryBackgroundColor,
+} from '../../resources/styles/Constants';
 
 const Drawer = createDrawerNavigator();
 
@@ -13,13 +18,13 @@ const MenuDrawerNavigator = () => {
   return (
     <Drawer.Navigator
       screenOptions={{
-        drawerActiveTintColor: '#4A64D2',
-        drawerActiveBackgroundColor: '#96A0CC',
-        drawerInactiveTintColor: '#4A64D2',
+        drawerActiveTintColor: mainBackgroundColor,
+        drawerActiveBackgroundColor: secondaryBackgroundColor,
+        drawerInactiveTintColor: mainBackgroundColor,
         drawerInactiveBackgroundColor: 'white',
         headerShown: false,
         drawerLabelStyle: {
-          fontSize: 16,
+          fontSize: mainTextSize,
         },
       }}
       drawerContent={props => <MenuDrawerComponent {...props} />}>

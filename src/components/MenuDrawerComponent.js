@@ -13,6 +13,7 @@ import {
   DrawerItemList,
 } from '@react-navigation/drawer';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {mainTextSize} from '../../resources/styles/Constants';
 
 const MenuDrawerComponent = props => {
   return (
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   textInRow: {
-    fontSize: 16,
+    fontSize: mainTextSize,
     marginLeft: 5,
   },
 });
